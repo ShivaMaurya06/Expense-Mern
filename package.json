@@ -1,0 +1,29 @@
+{
+  "name": "finflow",
+  "version": "1.0.0",
+  "description": "backend app for Finflow",
+  "main": "app.js",
+  "scripts": {
+    "build": "npm install && cd client && npm install --legacy-peer-deps && npm run build",
+    "start": "node app.js",
+    "server": "nodemon app",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bug Slicers",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^7.6.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.3",
+    "mongoose": "^6.3.4",
+    "nodemon": "^2.0.21",
+    "validator": "^13.7.0"
+  }
+}
